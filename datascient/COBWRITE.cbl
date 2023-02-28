@@ -11,16 +11,16 @@
        DATA DIVISION.
        FILE SECTION.
        FD EMPLOYEE.
-       01 EMPLOYEE-FILE.
-           05 EMPLOYEE-ID PIC X(5).
+       01 EMPLOYEEFILE.
+           05 EMPLOYEEID PIC X(5).
            05 NAME PIC A(10).
 
        PROCEDURE DIVISION.
 
            OPEN EXTEND EMPLOYEE.
-           MOVE '100' TO EMPLOYEE-ID.
+           MOVE '100' TO EMPLOYEEID.
            MOVE 'REVATHY' TO NAME.
-           WRITE EMPLOYEE-FILE
+           WRITE EMPLOYEEFILE
            END-WRITE.
            CLOSE EMPLOYEE.
            STOP RUN.
