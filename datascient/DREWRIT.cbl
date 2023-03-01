@@ -1,9 +1,9 @@
-        IDENTIFICATION DIVISION.                     
+       IDENTIFICATION DIVISION.                     
        PROGRAM-ID. DREWRIT.                         
        ENVIRONMENT DIVISION.                        
        INPUT-OUTPUT SECTION.                        
        FILE-CONTROL.                                
-           SELECT EMPLOYE ASSIGN TO IN1             
+           SELECT EMPLOYE ASSIGN TO EMP-FILE            
            ORGANIZATION IS INDEXED                  
            ACCESS IS RANDOM                         
            RECORD KEY IS ID-EMPLOYE .                
