@@ -1,5 +1,5 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. SALES.
+       PROGRAM-ID. SALESWITHCOMMISSION.
        AUTHOR.     PEGGY FISHER.
       ***************************************************************
       *  This program reads a file containing sales person yearly   *
@@ -34,16 +34,16 @@
 
         FD PRINT-FILE.
 
-        01  PRINT-LINE              PIC X(132).
+        01  PRINT-LINE             PIC X(132).
 
         WORKING-STORAGE SECTION.
-        01   WS-TOTAL-SALES         PIC 9(10) COMP-3.
-      
-        01   WS-REGION-SALES.
-             05 WS-EAST             PIC 9(7) VALUE ZEROES.
-             05 WS-WEST             PIC 9(7) VALUE ZEROES.
-             05 WS-NORTH            PIC 9(7) VALUE ZEROES.
-             05 WS-SOUTH            PIC 9(7) VALUE ZEROES.
+        01  WS-FIELDS.
+
+        01  WS-REGION-SALES.
+            05 WS-EAST             PIC 9(7) VALUE ZEROES.
+            05 WS-WEST             PIC 9(7) VALUE ZEROES.
+            05 WS-NORTH            PIC 9(7) VALUE ZEROES.
+            05 WS-SOUTH            PIC 9(7) VALUE ZEROES.
 
         01  HEADING-LINE.
             05 FILLER              PIC X(5) VALUE SPACES.
@@ -119,4 +119,4 @@
            CLOSE PRINT-FILE.
            STOP RUN.
 
-         END PROGRAM SALES.
+          END PROGRAM SALESWITHCOMMISSION.

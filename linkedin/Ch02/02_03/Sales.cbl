@@ -37,7 +37,7 @@
         01  PRINT-LINE              PIC X(132).
 
         WORKING-STORAGE SECTION.
-        01   WS-TOTAL-SALES         PIC 9(10) COMP-3.
+        01   WS-TOTAL-SALES         PIC 9(10).
       
         01   WS-REGION-SALES.
              05 WS-EAST             PIC 9(7) VALUE ZEROES.
@@ -119,4 +119,4 @@
            CLOSE PRINT-FILE.
            STOP RUN.
 
-         END PROGRAM SALES.
+          END PROGRAM SALES.

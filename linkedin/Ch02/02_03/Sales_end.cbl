@@ -119,4 +119,4 @@
            CLOSE PRINT-FILE.
            STOP RUN.
 
-         END PROGRAM SALES.
+          END PROGRAM SALES.
