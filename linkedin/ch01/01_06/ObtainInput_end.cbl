@@ -9,9 +9,9 @@
        01 NAME PIC A(20).
      
        PROCEDURE DIVISION. 
-           0100-START-HERE.
+       0100-START-HERE.
                DISPLAY "Please enter your name: ".
                ACCEPT NAME.
                DISPLAY "It is nice to meet you, ", NAME.
-       STOP RUN.
+           STOP RUN.
        END PROGRAM OBTAININPUT.

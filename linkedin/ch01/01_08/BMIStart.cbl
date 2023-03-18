@@ -14,5 +14,5 @@
        0100-START-HERE.
 
 
-       STOP RUN.
+           STOP RUN.
        END PROGRAM BMICALCULATOR.

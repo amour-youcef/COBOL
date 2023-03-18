@@ -7,7 +7,7 @@
        DATA DIVISION.
      
        PROCEDURE DIVISION. 
-           0100-START-HERE.
+       0100-START-HERE.
                DISPLAY "Hello World!".
-       STOP RUN.
+           STOP RUN.
        END PROGRAM OBTAININPUT.

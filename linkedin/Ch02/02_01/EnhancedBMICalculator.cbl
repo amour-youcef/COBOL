@@ -93,5 +93,5 @@
            CLOSE BMI-FILE.
            CLOSE PRINT-FILE.
 
-       STOP RUN.
+           STOP RUN.
        END PROGRAM ENHANCEDBMICALCULATOR.
