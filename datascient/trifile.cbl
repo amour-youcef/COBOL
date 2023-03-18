@@ -37,4 +37,4 @@
            GIVING FILE-OUT.                    
            IF SORT-RETURN > 0  DISPLAY "SORT FILED"  
            DISPLAY "FIN DU TRI FILE PERSONNEL".      
-           STOP RUN.                                                                                
+           STOP RUN .                                                                                 
