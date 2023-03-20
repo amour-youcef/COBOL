@@ -1,0 +1,8 @@
+mkdir CMD
+touch CMD/cmd1
+git status
+git add .
+git commit -m "123"
+git push
+cobc -x hello.cbl 
+./hello 
