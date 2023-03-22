@@ -1,0 +1,106 @@
+*                                                                       00000100
+* PREMIER MAPSET ECRAN CREATION                                         00000100
+*                                                                       00000100
+MAP1CIA DFHMSD TYPE=&SYSPARM,MODE=INOUT,LANG=COBOL,                    *00000100
+               CTRL=(FREEKB,FRSET),STORAGE=AUTO,TIOAPFX=YES             00000200
+*                                                                       00000100
+MAP1    DFHMDI COLUMN=1,LINE=1,SIZE=(24,80),                           *00000210
+               MAPATTS=(COLOR,HILIGHT),DSATTS=(COLOR,HILIGHT)
+*                                                                       00000100
+TRTM    DFHMDF POS=(1,1),                                              *
+               ATTRB=ASKIP,LENGTH=9,                                   *
+               INITIAL='TRAN/TERM'
+*
+        DFHMDF POS=(1,29),                                             *00000211
+               ATTRB=ASKIP,LENGTH=23,                                  *00000220
+               INITIAL='CREATION D"UN CLIENT'                           00000300
+*
+DATE    DFHMDF POS=(1,68),                                             *00000400
+               ATTRB=ASKIP,LENGTH=10,                                  *00000410
+               INITIAL='JJMMAAAA'
+*                                                                       00000100
+        DFHMDF POS=(2,29),                                             *00000211
+               ATTRB=ASKIP,LENGTH=23,                                  *00000220
+               INITIAL='-----------------------'                        00000300
+*
+HEURE   DFHMDF POS=(2,68),                                             *
+               ATTRB=ASKIP,LENGTH=8,                                   *
+               INITIAL='00:00:00'
+*                                                                       00000100
+        DFHMDF POS=(8,10),                                             *00000211
+               ATTRB=ASKIP,LENGTH=22,                                  *00000220
+               INITIAL='NUMERO CLIENT*: '                               00000300
+NUMCLI DFHMDF POS=(8,33),                                             *
+               ATTRB=UNPROT,LENGTH=4,HILIGHT=UNDERLINE
+*
+        DFHMDF POS=(8,38),                                             *
+               ATTRB=ASKIP,LENGTH=1
+*                                                                       00000100
+        DFHMDF POS=(10,10),                                            *00000211
+               ATTRB=ASKIP,LENGTH=6,                                   *00000220
+               INITIAL='NOM*: '                                         00000300
+NOMCLI DFHMDF POS=(10,17),                                            *
+               ATTRB=UNPROT,LENGTH=20,HILIGHT=UNDERLINE
+*
+        DFHMDF POS=(10,38),                                            *
+               ATTRB=ASKIP,LENGTH=1
+        DFHMDF POS=(10,40),                                            *00000211
+               ATTRB=ASKIP,LENGTH=9,                                   *00000220
+               INITIAL='PRENOM*: '                                      00000300
+PNMCLI  DFHMDF POS=(10,50),                                            *00000211
+               ATTRB=UNPROT,LENGTH=20,HILIGHT=UNDERLINE                 00000220
+        DFHMDF POS=(10,71),                                            *
+               ATTRB=ASKIP,LENGTH=1
+*                                                                       00000100
+        DFHMDF POS=(12,10),                                            *
+               ATTRB=ASKIP,LENGTH=12,                                  *
+               INITIAL='ADRESSE 1 : '
+ADSCLI  DFHMDF POS=(12,24),                                            *00000400
+               ATTRB=UNPROT,LENGTH=30,HILIGHT=UNDERLINE                 00000410
+        DFHMDF POS=(12,55),                                            *
+               ATTRB=ASKIP,LENGTH=1
+*                                                                       00000100
+        DFHMDF POS=(14,14),                                            *
+               ATTRB=ASKIP,LENGTH=14,                                  *
+               INITIAL='CODE POSTAL : '
+CODPOS  DFHMDF POS=(14,29),                                            *00000400
+               ATTRB=UNPROT,LENGTH=5,HILIGHT=UNDERLINE                  00000410
+        DFHMDF POS=(14,35),                                            *
+               ATTRB=ASKIP,LENGTH=1
+*
+        DFHMDF POS=(14,37),                                            *00000211
+               ATTRB=ASKIP,LENGTH=8,                                   *00000220
+               INITIAL='VILLE : '                                       00000300
+VILLE   DFHMDF POS=(14,46),                                            *00000211
+               ATTRB=UNPROT,LENGTH=25,HILIGHT=UNDERLINE                 00000220
+        DFHMDF POS=(14,72),                                            *
+               ATTRB=ASKIP,LENGTH=1
+*                                                                       00000100
+        DFHMDF POS=(18,10),                                            *
+               ATTRB=ASKIP,LENGTH=17,                                  *
+               INITIAL='TELEPHONE FIXE : '
+EMAICL  DFHMDF POS=(18,28),                                            *
+               ATTRB=UNPROT,LENGTH=10,HILIGHT=UNDERLINE
+        DFHMDF POS=(18,39),                                            *
+               ATTRB=ASKIP,LENGTH=1
+*
+*
+        DFHMDF POS=(22,2),                                             *
+               ATTRB=ASKIP,LENGTH=23,                                  *
+               INITIAL='(*) CHAMPS OBLIGATOIRES'
+*
+        DFHMDF POS=(23,2),                                             *
+               ATTRB=ASKIP,LENGTH=46,                                  *
+               INITIAL='---------------------------------------------'
+*
+        DFHMDF POS=(24,2),                                             *
+               ATTRB=ASKIP,LENGTH=10,                                  *
+               INITIAL='PF12 - FIN'
+        DFHMDF POS=(24,25),                                            *
+               ATTRB=ASKIP,LENGTH=12,                                  *
+               INITIAL='PF3 - RETOUR'
+        DFHMDF POS=(24,50),                                            *
+               ATTRB=ASKIP,LENGTH=18,                                  *
+               INITIAL='ENTER - VALIDATION'
+        DFHMSD TYPE=FINAL                                               00000800
+        END                                                             00000900
