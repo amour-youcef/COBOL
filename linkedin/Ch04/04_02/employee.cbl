@@ -25,10 +25,10 @@
 			      04 STARTDATE.
 				      05 START-YEAR	PIC 9(4).
 				      05 START-MONTH	PIC 9(2).
-				      05 START-DAY	    PIC 9(2).
-			      04 SALARY    	    PIC 9(9).    
-            02 DEPARTMENT           PIC X(30).   
-			    02 GENDER               PIC X.
+				      05 START-DAY	PIC 9(2).
+			      04 SALARY    	   PIC 9(9).    
+            02 DEPARTMENT        PIC X(30).   
+			    02 GENDER           PIC X.
 
         FD EMPLOYEEREPORT.
         01 PRINT-LINE                PIC X(132).

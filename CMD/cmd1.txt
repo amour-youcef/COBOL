@@ -6,3 +6,4 @@ git commit -m "123"
 git push
 cobc -x hello.cbl 
 ./hello 
+cobc -x -o prog main.cob pgsecond.cbl 
