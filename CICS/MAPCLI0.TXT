@@ -1,0 +1,66 @@
+*                                                                       00000100
+* PREMIER MAPSET                                                        00000100
+*                                                                       00000100
+MAP0CIA DFHMSD TYPE=&SYSPARM,MODE=INOUT,LANG=COBOL,                    *00000100
+               CTRL=(FREEKB,FRSET),STORAGE=AUTO,TIOAPFX=YES             00000200
+MAP0    DFHMDI COLUMN=1,LINE=1,SIZE=(24,80)                             00000210
+*
+TRTM    DFHMDF POS=(1,2),                                              *
+               ATTRB=ASKIP,LENGTH=9
+*
+        DFHMDF POS=(1,28),                                             *00000211
+               ATTRB=ASKIP,LENGTH=22,                                  *00000220
+               INITIAL='GESTION DES CLIENTS'                         00000300
+*
+DATE    DFHMDF POS=(1,60),                                             *00000400
+               ATTRB=ASKIP,LENGTH=10                                    00000410
+*
+        DFHMDF POS=(2,28),                                             *
+               ATTRB=ASKIP,LENGTH=22,                                  *
+               INITIAL='----------------------'
+*
+HEURE   DFHMDF POS=(2,60),                                             *00000400
+               ATTRB=ASKIP,LENGTH=8                                     00000410
+*
+        DFHMDF POS=(7,16),                                             *00000211
+               ATTRB=ASKIP,LENGTH=27,                                  *00000220
+               INITIAL='1 - CREATION D"UN CLIENT'                    00000300
+*
+        DFHMDF POS=(9,16),                                             *00000211
+               ATTRB=ASKIP,LENGTH=31,                                  *00000220
+               INITIAL='2 - CONSULTATION D"UN CLIENT'                00000300
+*
+        DFHMDF POS=(11,16),                                            *00000211
+               ATTRB=ASKIP,LENGTH=30,                                  *00000220
+               INITIAL='3 - MODIFICATION D"UN CLIENT'                 00000300
+*
+        DFHMDF POS=(13,16),                                            *00000211
+               ATTRB=ASKIP,LENGTH=31,                                  *00000220
+               INITIAL='4 - SUPPRESSION D"UN CLIENT'                    00000300
+*
+        DFHMDF POS=(15,16),                                            *00000211
+               ATTRB=ASKIP,LENGTH=33,                                  *00000220
+               INITIAL='5 - FIN DU PROGRAMME'                           00000300
+*
+        DFHMDF POS=(18,26),                                            *00000211
+               ATTRB=ASKIP,LENGTH=21,                                  *00000220
+               INITIAL='SAISIR VOTRE CHOIX : '                          00000300
+CHOIX   DFHMDF POS=(18,49),                                            *00000400
+               ATTRB=UNPROT,LENGTH=1,                                  *00000410
+               INITIAL='.'                                              00000420
+        DFHMDF POS=(18,51),                                            *
+               ATTRB=ASKIP,LENGTH=1
+MESSAGE DFHMDF POS=(22,5),                                             *00000400
+               ATTRB=ASKIP,LENGTH=65,                                  *00000410
+               INITIAL='................................'               00000420
+        DFHMDF POS=(24,2),                                             *00000211
+               ATTRB=ASKIP,LENGTH=10,                                  *00000220
+               INITIAL='F1 - AIDE'                                     00000300
+        DFHMDF POS=(24,15),                                             *00000211
+               ATTRB=ASKIP,LENGTH=18,                                  *00000220
+               INITIAL='F3 - FIN PROGRAMME'            
+        DFHMDF POS=(24,40),                                            *00000211
+               ATTRB=ASKIP,LENGTH=18,                                  *00000220
+               INITIAL='ENTER - VALIDATION'                             00000300
+        DFHMSD TYPE=FINAL                                               00000800
+        END                                                             00000900
