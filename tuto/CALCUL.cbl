@@ -20,6 +20,6 @@
            ADD A TO C .
 
            display C 
-
+           display C  
 
            STOP RUN.          
