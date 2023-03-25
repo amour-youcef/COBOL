@@ -7,3 +7,5 @@ git push
 cobc -x hello.cbl 
 ./hello 
 cobc -x -o prog main.cob pgsecond.cbl 
+
+git push origin master --force
