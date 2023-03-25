@@ -9,3 +9,7 @@ cobc -x hello.cbl
 cobc -x -o prog main.cob pgsecond.cbl 
 
 git push origin master --force
+
+git switch feat1
+
+git pull --rebase
