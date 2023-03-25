@@ -1,0 +1,19 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. BONJOUR.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 MOYENNE-GENERALE PIC  99v99.
+           88 RECU VALUE  10 THRU 20.
+           88 COLLE VALUE  0 THRU 9.99.
+       PROCEDURE DIVISION.
+           DISPLAY "BIENVENUE A CETTE FORMATION".
+           
+           MOVE  0 TO  MOYENNE-GENERALE .
+
+           IF RECU  THEN DISPLAY "test ok "
+           ELSE DISPLAY " nul pour test"
+           END-IF 
+
+           DISPLAY MOYENNE-GENERALE .
+
+           STOP RUN.
