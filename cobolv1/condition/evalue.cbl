@@ -1,0 +1,16 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. BONJOUR.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 VAR1 PIC 9 VALUE 0.
+       PROCEDURE DIVISION.
+           MOVE 3 TO VAR1.
+           EVALUATE TRUE
+           WHEN VAR1 > 2
+           DISPLAY "VAR1 GREATER THAN 2"
+           WHEN VAR1 < 0
+           DISPLAY "VAR1 LESS THAN 0"
+           WHEN OTHER
+           DISPLAY "INVALID VALUE OF VAR1"
+           END-EVALUATE.
+           STOP RUN.

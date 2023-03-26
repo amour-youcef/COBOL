@@ -1,0 +1,18 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. BONJOUR.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+
+       01 PRIX PIC 9(4) VALUE 10.
+       
+       01  VAR1 PIC 9(4) VALUE  50.
+       01  VAR2 PIC 9(4) VALUE  20.
+       01  VAR3 PIC 9(4) VALUE  70.
+       01  VAR4 PIC 9(4).
+       01  VAR5 PIC 9(4).   
+       PROCEDURE DIVISION. 
+              
+           MULTIPLY VAR1 BY VAR2 VAR3 VAR4.
+           MULTIPLY VAR1  BY VAR2.
+
+           STOP  RUN .

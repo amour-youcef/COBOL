@@ -1,0 +1,18 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. BONJOUR.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 NAME-DEPT1 PIC X(10)/XX VALUE SPACES.
+       01 NAME-DEPT PIC X(10)/XX VALUE "MAHENDER/01".
+       PROCEDURE DIVISION.
+
+           DISPLAY "BIENVENUE A CETTE FORMATION".
+           
+                  
+           MOVE "MAHENDER/01" TO NAME-DEPT1.
+           DISPLAY NAME-DEPT1
+           
+
+           DISPLAY NAME-DEPT
+      
+           STOP RUN.
