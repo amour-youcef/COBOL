@@ -1,0 +1,8 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID.  PARAGRAPH.
+       PROCEDURE DIVISION.
+       DEBUT.
+           PERFORM B-PARA 3 TIMES.
+           STOP RUN.
+       B-PARA.
+           DISPLAY "IN B-PARA".

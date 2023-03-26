@@ -1,0 +1,12 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PERFORM2.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 CNT PIC 9(1) VALUE 0.
+       PROCEDURE DIVISION.
+       A-PARA.
+           PERFORM B-PARA WITH TEST AFTER UNTIL CNT>3.
+           STOP RUN.
+       B-PARA.
+           DISPLAY "CNT : "CNT.
+           ADD 1 TO CNT.
