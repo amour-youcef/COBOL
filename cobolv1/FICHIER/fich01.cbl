@@ -1,0 +1,24 @@
+       IDENTIFICATION DIVISION. 
+       PROGRAM-ID. Youssouf.
+       
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT TEST-FILE ASSIGN TO DD-TFILE
+           FILE STATUS IS TESTST.
+       DATA DIVISION.
+       FILE SECTION.
+       FD TEST-FILE.
+
+       01 REC-TEST-FILE.
+           05 EMP-ID PIC X(10).
+           05 EMP-NAME PIC X(20).
+           05 EMP-ADR PIC X(30).
+           05 FILLER PIC X(40).
+       PROCEDURE DIVISION.
+           INITIALIZE TESTST.
+           OPEN OUTPUT TEST-FILE.
+           IF TEST-STATUS = "00"
+           DISPLAY "FILE OPEN SUCCESSFUL"
+           ELSE
+           DISPLAY "FILE OPENING ERROR".
