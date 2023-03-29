@@ -1,0 +1,32 @@
+       IDENTIFICATION DIVISION. 
+       PROGRAM-ID. Youssouf.
+       
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT EMPLOYE ASSIGN TO IN1  
+           ORGANIZATION IS LINE SEQUENTIAL.
+       DATA DIVISION.
+       FILE SECTION.
+       FD EMPLOYE.
+       01 ENR-EMPLOYE.
+           05 ID-EMPLOYE PIC 9(3).
+           05 NAME-EMPLOYE PIC A(15).
+           05 TITRE-EMPLOYE PIC X(3).
+       WORKING-STORAGE SECTION.
+       01 WS-EMPLOYE.
+         05 WS-ID-EMPLOYE PIC 9(3).
+         05 WS-NAME-EMPLOYE PIC A(15).
+         05 WS-TITRE-EMPLOYE PIC X(3).
+       01 WS-EOF PIC A(1).     
+
+       PROCEDURE DIVISION.
+           OPEN INPUT EMPLOYE.
+           PERFORM UNTIL WS-EOF='Y'
+           READ EMPLOYE INTO WS-EMPLOYE
+           AT END MOVE 'Y' TO WS-EOF
+           NOT AT END DISPLAY WS-EMPLOYE
+           END-READ
+           END-PERFORM.
+           CLOSE EMPLOYE.
+           STOP RUN.    
