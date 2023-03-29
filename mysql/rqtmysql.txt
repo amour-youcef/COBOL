@@ -1,0 +1,5 @@
+/********* fedora cmd *******
+
+more /etc/os-release     -> savoire version de fedora
+sudo systemctl status mysqld
+
