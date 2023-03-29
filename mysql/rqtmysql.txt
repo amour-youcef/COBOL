@@ -1,5 +1,18 @@
 /********* fedora cmd *******
-
 more /etc/os-release     -> savoire version de fedora
-sudo systemctl status mysqld
 
+/**** cmd mysql *****/
+mysql --version
+sudo systemctl status mysqld
+sudo systemctl start mysqld
+sudo systemctl stop mysqld
+sudo mysql
+alter user 'root'@'localhost' identified by 'admin@123';
+
+flush privileges;
+
+mysql -u root -h localhost -p
+mot de passe :admin@123
+
+sudo systemctl enable mysqld
+select version();
