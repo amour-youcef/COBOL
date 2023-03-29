@@ -1,0 +1,25 @@
+create table enseignant (id integer constraint pk_enseignant primary key not null, 
+                         nom varchar(30) not null,
+                         prenom varchar(30) not null 
+                        );
+create table etudiant (id integer constraint pk_etudiant primary key not null,
+                       nom varchar(30) not null,
+                       prenom varchar(30) not null
+                      ); 
+create table salle (id integer constraint pk_salle primary key not null,
+                       nbplaces integer check (nbplaces > 0)
+                      );                                          
+create table matiere (id integer constraint pk_matiere primary key not null,
+                       intitule varchar(30)
+                      );
+create table cours (id integer constraint pk_cours primary key not null,
+                       nom varchar(30) not null,
+                       idenseignant integer constraint fk_enseignant references enseignant(id),
+                       idmatiere integer constraint fk_matiere references matiere(id),
+                       idsalle integer constraint fk_salle references salle(id)                 
+                      );
+create table inscription (id integer constraint pk_inscription primary key not null,
+                       idetudiant integer constraint fk_etudiant references etudiant(id),
+                       idcours integer constraint fk_cours references cours(id),
+                       evaluation integer
+                      );
