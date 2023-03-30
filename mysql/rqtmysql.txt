@@ -2,6 +2,8 @@
 more /etc/os-release     -> savoire version de fedora
 /*******xampp*******
  sudo ./xampp-linux-x64-*-installer.run
+ sudo ./xampp-linux-x64-8.2.0-0-installer.run
+ ‘xampp-linux-x64-8.2.0-0-installer.run.1’ saved [157372647/157372647]
 /************************************
 /**** cmd mysql *****/
 mysql --version

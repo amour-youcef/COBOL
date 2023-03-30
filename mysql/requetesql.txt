@@ -1,1 +1,21 @@
+/**************create table ********/
+CREATE TABLE Persons (
+    id int not NULL,
+    firstname varchar(255) ,
+    lastname varchar(255) ,
+    City varchar(255),
+    comments TEXT,
+    address varchar(255)
+    )
 
+/**********
+CREATE TABLE employee (
+    id INT(10) NOT NULL AUTO_INCREMENT,
+    firstname VARCHAR (35),
+    lastname varchar (35),
+    COMMENTS TEXT,
+    PRIMARY KEY (id)
+    )
+
+ /******************insert*************
+ INSERT INTO `menu`( `menu_name`, `visible`, `order_menu`) VALUES ('Home',1,1)   
