@@ -1,6 +1,8 @@
 /********* fedora cmd *******
 more /etc/os-release     -> savoire version de fedora
-
+/*******xampp*******
+ sudo ./xampp-linux-x64-*-installer.run
+/************************************
 /**** cmd mysql *****/
 mysql --version
 sudo systemctl status mysqld
