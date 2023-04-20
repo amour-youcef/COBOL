@@ -12,4 +12,6 @@
               02 WS-REGION-id   PIC  x(2).
               02 ws-nom-region  PIC  x(15).                       
         PROCEDURE DIVISION .
-           call pgsecond using WS-REGION-id, ws-nom-region.
+           call 'pgsecond' using WS-REGION-id, ws-nom-region.
+
+           STOP RUN .
